@@ -1,0 +1,40 @@
+target_link_options(${EXECUTABLE} PRIVATE
+    -L${BUILD_RELATIVE_PATH__SDK_NXP}/libs                  # di default questa opzione se non presente 
+    -nostdlib 
+    -Wl,-Map=${PROJECT_NAME}.map
+    -Wl,--gc-sections
+    -Wl,-print-memory-usage
+    -Wl,--sort-section=alignment
+    -Wl,--cref
+    -mcpu=cortex-m4
+    -mfpu=fpv4-sp-d16
+    -mfloat-abi=hard
+    -mthumb
+    -T LPC54608_tst_freertos.ld
+    -l:libpower_hardabi.a   # questa opzione è ininfluente, sembra venga ignorata dal linker perchè inserita prima della lista dei file oggetto nel comando di link (arm-none-eabi-ld), vedere il file "... CMakeFiles/TestMarco_cmake.out.dir/link.txt"
+                            # per poter inserire questa opzione come ultima del comando di link bisogna usare "target_link_libraries"
+)
+
+target_link_libraries(${EXECUTABLE} PRIVATE
+    :libpower_hardabi.a
+)
+
+
+# Print executable size
+add_custom_command(TARGET ${EXECUTABLE}
+    POST_BUILD
+    COMMAND arm-none-eabi-size ${EXECUTABLE}
+)
+
+# Create hex file
+add_custom_command(TARGET ${EXECUTABLE}
+    POST_BUILD
+    COMMAND arm-none-eabi-objcopy -O ihex ${EXECUTABLE} ${PROJECT_NAME}.hex
+    COMMAND arm-none-eabi-objcopy -O binary ${EXECUTABLE} ${PROJECT_NAME}.bin
+    COMMAND cp ${EXECUTABLE} ${BUILD_RELATIVE_PATH__XPRESSO_PRJ}
+)
+
+add_custom_command(TARGET ${EXECUTABLE}
+    POST_BUILD
+    COMMENT "nxp - Platform selected: ${WP_PLATFORM_STR} - Config fw2_lib folder: ${FW2_LIB_CONFIG_DIR} - fw2 cmake files folder: ${RELATIVE_PATH__FW2_LIB_PRJ}"
+)
