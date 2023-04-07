@@ -31,7 +31,8 @@ add_custom_command(TARGET ${EXECUTABLE}
     POST_BUILD
     COMMAND arm-none-eabi-objcopy -O ihex ${EXECUTABLE} ${PROJECT_NAME}.hex
     COMMAND arm-none-eabi-objcopy -O binary ${EXECUTABLE} ${PROJECT_NAME}.bin
-    COMMAND cp ${EXECUTABLE} ${BUILD_RELATIVE_PATH__XPRESSO_PRJ}
+    COMMAND [ -d ${BUILD_RELATIVE_PATH__XPRESSO_PRJ} ] || mkdir ${BUILD_RELATIVE_PATH__XPRESSO_PRJ}
+    COMMAND cp ${EXECUTABLE} ${BUILD_RELATIVE_PATH__XPRESSO_PRJ} 
 )
 
 add_custom_command(TARGET ${EXECUTABLE}
