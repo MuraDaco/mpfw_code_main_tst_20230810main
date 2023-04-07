@@ -6,8 +6,8 @@
  */
 
 // lib include
-#include "fw2/core/core/src/tb/kr/krThread/v_04/krThreadTbl.h"
-#include "tst_20221206/src/tb/kr/krThread/v_02/krThreadTbl.h"
+#include "mpfw_code_libs_fw2_core_core/src/tb/kr/krThread/v_04/krThreadTbl.h"
+#include "mpfw_code_apps_tst_20221206/src/tb/kr/krThread/v_02/krThreadTbl.h"
 
 namespace fw2 {namespace wrapper {namespace core	{
 

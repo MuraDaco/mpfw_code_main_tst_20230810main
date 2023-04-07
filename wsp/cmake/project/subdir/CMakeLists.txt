@@ -6,11 +6,11 @@ include(path_prv_config.cmake)
 include(../path_pub_config.cmake)
 
 if(WP_PLATFORM_NXP)
-    include(${RELATIVE_PATH__SDK_NXP_PRJ}/ver_config.cmake)
-    include(${RELATIVE_PATH__SDK_NXP_PRJ}/path_pub_config.cmake)
-    include(${RELATIVE_PATH__SDK_NXP_PRJ}/dir_config.cmake)
-    include(${RELATIVE_PATH__SDK_NXP_PRJ}/file_config.cmake)
-    include(${RELATIVE_PATH__SDK_NXP_PRJ}/include_config.cmake)
+    include(${RELATIVE_PATH__LIBS_SDK_NXP_PRJ}/ver_config.cmake)
+    include(${RELATIVE_PATH__LIBS_SDK_NXP_PRJ}/path_pub_config.cmake)
+    include(${RELATIVE_PATH__LIBS_SDK_NXP_PRJ}/dir_config.cmake)
+    include(${RELATIVE_PATH__LIBS_SDK_NXP_PRJ}/file_config.cmake)
+    include(${RELATIVE_PATH__LIBS_SDK_NXP_PRJ}/include_config.cmake)
     
     include(../nxp/dir_config.cmake)
     include(../nxp/file_config.cmake)
@@ -23,15 +23,15 @@ if(WP_PLATFORM_MAC)
 endif()
 
 
-message(STATUS "fw2 cmake files folder: ${RELATIVE_PATH__FW2_LIB_PRJ}")
-include(${RELATIVE_PATH__FW2_LIB_PRJ}/ver_config.cmake)
-include(${RELATIVE_PATH__FW2_LIB_PRJ}/dir_config.cmake)
-include(${RELATIVE_PATH__FW2_LIB_PRJ}/file_config.cmake)
-include(${RELATIVE_PATH__FW2_LIB_PRJ}/include_config.cmake)
+message(STATUS "fw2 cmake files folder: ${RELATIVE_PATH__LIBS_FW2_CORE_CORE_PRJ}")
+include(${RELATIVE_PATH__LIBS_FW2_CORE_CORE_PRJ}/ver_config.cmake)
+include(${RELATIVE_PATH__LIBS_FW2_CORE_CORE_PRJ}/dir_config.cmake)
+include(${RELATIVE_PATH__LIBS_FW2_CORE_CORE_PRJ}/file_config.cmake)
+include(${RELATIVE_PATH__LIBS_FW2_CORE_CORE_PRJ}/include_config.cmake)
 
-include(${RELATIVE_PATH__TST_LIB_PRJ}/dir_config.cmake)
-include(${RELATIVE_PATH__TST_LIB_PRJ}/file_config.cmake)
-include(${RELATIVE_PATH__TST_LIB_PRJ}/include_config.cmake)
+include(${RELATIVE_PATH__APPS_XXX_PRJ}/dir_config.cmake)
+include(${RELATIVE_PATH__APPS_XXX_PRJ}/file_config.cmake)
+include(${RELATIVE_PATH__APPS_XXX_PRJ}/include_config.cmake)
 
 
 ## ******************************************************************
@@ -47,7 +47,7 @@ add_executable(${EXECUTABLE}
 
 
 if(WP_PLATFORM_NXP)
-    include(${RELATIVE_PATH__SDK_NXP_PRJ}/compile_option.cmake)
+    include(${RELATIVE_PATH__LIBS_SDK_NXP_PRJ}/compile_option.cmake)
     add_compile_definitions(
         TST_20221206
         WP_PLATFORM_NXP
@@ -59,7 +59,7 @@ if(WP_PLATFORM_NXP)
 endif()
 
 if(WP_PLATFORM_MAC)
-    include(${RELATIVE_PATH__FW2_LIB_PRJ}/compile_option.cmake)
+    include(${RELATIVE_PATH__LIBS_FW2_CORE_CORE_PRJ}/compile_option.cmake)
     add_compile_definitions(TST_20221206)
 endif()
 

@@ -9,8 +9,8 @@
 #include "krInitStaticTbl.h"
 
 // lib include
-#include "fw2/wrapper/resources/common/src/tb/kr/krInit/v_01/krInitStaticTbl.h"
-#include "tst_20221206/src/tb/kr/krInit/v_02/krInitStaticTbl.h"
+#include "mpfw_code_libs_fw2_wrapper_resources/common/src/tb/kr/krInit/v_01/krInitStaticTbl.h"
+#include "mpfw_code_apps_tst_20221206/src/tb/kr/krInit/v_02/krInitStaticTbl.h"
 
 namespace fw2 { namespace core { namespace core {
 

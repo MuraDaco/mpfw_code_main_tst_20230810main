@@ -36,5 +36,5 @@ add_custom_command(TARGET ${EXECUTABLE}
 
 add_custom_command(TARGET ${EXECUTABLE}
     POST_BUILD
-    COMMENT "nxp - Platform selected: ${WP_PLATFORM_STR} - Config fw2_lib folder: ${FW2_LIB_CONFIG_DIR} - fw2 cmake files folder: ${RELATIVE_PATH__FW2_LIB_PRJ}"
+    COMMENT "nxp - Platform selected: ${WP_PLATFORM_STR} - Config fw2_lib folder: ${FW2_LIB_CONFIG_DIR} - fw2 cmake files folder: ${RELATIVE_PATH__LIBS_FW2_CORE_CORE_PRJ}"
 )

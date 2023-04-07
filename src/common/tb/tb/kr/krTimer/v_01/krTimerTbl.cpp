@@ -9,7 +9,7 @@
 #include "krTimerTbl.h"
 
 // lib include
-#include "tst_20221206/src/tb/kr/krTimer/v_02/krTimerTbl.h"
+#include "mpfw_code_apps_tst_20221206/src/tb/kr/krTimer/v_02/krTimerTbl.h"
 
 namespace fw2 { namespace core { namespace core {
 
