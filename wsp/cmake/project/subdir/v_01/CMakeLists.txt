@@ -79,12 +79,6 @@ endif()
 
 target_include_directories(${EXECUTABLE} PRIVATE
 
-    $<$<BOOL:${WP_PLATFORM_NXP}>: ${CODE_DIR_LIB_SDK_NXP_INCLUDE}>
-    #${CODE_DIR_LIB_FW2_INCLUDE}
-    
-    #${CODE_DIR_LIB_FW2_WP_RS_INCLUDE}
-
-
     ${CODE_DIR_APP_SOURCE_MAIN_INCLUDE}
 
 )
