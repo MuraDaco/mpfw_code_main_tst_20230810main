@@ -12,4 +12,4 @@
 set(BUILD_RELATIVE_PATH__SDK_NXP        ${BUILD_RELATIVE_PATH__CODE}/libs/mpfw_code_libs_sdk_nxp/src/v_${SDK_NXP_LIB_VER}                  )
 
 # after build process the executable file (.out) is copied into xpresso build folder to be available to upload to micro via st-link
-set(BUILD_RELATIVE_PATH__XPRESSO_PRJ    ${BUILD_RELATIVE_PATH__WSP}/xpresso/workaspace/${APP_NAME}/${CMAKE_BUILD_TYPE}      )
+set(BUILD_RELATIVE_PATH__XPRESSO_PRJ    ${BUILD_RELATIVE_PATH__WSP}/xpresso/${APP_NAME}/${CMAKE_BUILD_TYPE}      )
