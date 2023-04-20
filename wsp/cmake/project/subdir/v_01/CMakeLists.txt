@@ -3,7 +3,7 @@
 ## Load configuration directory
 
 include(path_prv_config.cmake)
-include(${RELATIVE_PATH__CODE}/path_pub_config.cmake)
+include(${RELATIVE_PATH__CODE_CMAKE}/path_pub_config.cmake)
 include(path_prv_config.cmake)
 include(../../path_pub_config.cmake)
 
