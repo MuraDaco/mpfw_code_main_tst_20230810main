@@ -8,13 +8,13 @@
 
 
 # app folder: relative path of "tst_20221206" directory from CMakeLists.txt project folder
-set(RELATIVE_PATH__MAIN_APP         ../../../../..                             )
-set(RELATIVE_PATH__MAIN             ${RELATIVE_PATH__MAIN_APP}/..               )
+set(RELATIVE_PATH__MAIN_APP         ../../../../..                                                  )
+set(RELATIVE_PATH__MAIN             ${RELATIVE_PATH__MAIN_APP}/..                                   )
 # root folder: relative path of "code" directory (project root folder) respect CMakeLists.txt project folder
-set(RELATIVE_PATH__CODE             ${RELATIVE_PATH__MAIN}/..                   )
-set(RELATIVE_PATH__CODE_CMAKE       ${RELATIVE_PATH__CODE}/cmake                )
-set(RELATIVE_PATH__APPS             ${RELATIVE_PATH__CODE}/apps                 )
-set(RELATIVE_PATH__LIBS             ${RELATIVE_PATH__CODE}/libs                 )
+set(RELATIVE_PATH__CODE             ${RELATIVE_PATH__MAIN}/..                                       )
+set(RELATIVE_PATH__CODE_CMAKE       ${RELATIVE_PATH__CODE}/${MAIN_CMAKE_FILES_PATH}                 )
+set(RELATIVE_PATH__APPS             ${RELATIVE_PATH__CODE}/apps                                     )
+set(RELATIVE_PATH__LIBS             ${RELATIVE_PATH__CODE}/libs                                     )
 
 
 
