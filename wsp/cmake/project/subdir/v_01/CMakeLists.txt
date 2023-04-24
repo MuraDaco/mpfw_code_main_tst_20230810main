@@ -13,7 +13,7 @@ if(WP_PLATFORM_NXP)
     include(${RELATIVE_PATH__LIBS_SDK_NXP_PRJ}/dir_config.cmake)
     include(${RELATIVE_PATH__LIBS_SDK_NXP_PRJ}/include_config.cmake)
     
-    include(../../nxp/path_pub_config.cmake)
+    include(../../nxp/path_xpresso_config.cmake)
     include(../../nxp/dir_config.cmake)
     include(../../nxp/file_config.cmake)
     include(../../nxp/include_config.cmake)
