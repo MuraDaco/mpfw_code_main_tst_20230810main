@@ -16,7 +16,7 @@ set(RELATIVE_PATH__CODE_CMAKE       ${RELATIVE_PATH__CODE}/${MAIN_CMAKE_FILES_PA
 set(RELATIVE_PATH__APPS             ${RELATIVE_PATH__CODE}/apps                                     )
 set(RELATIVE_PATH__LIBS             ${RELATIVE_PATH__CODE}/libs                                     )
 
-
+set(CODE_CMAKE_MODULES_DIR          ${RELATIVE_PATH__CODE}/${GLOBAL_CMAKE_MODULES_PATH}             )
 
 ##################################################################################
 ## Relative path from build folder where the executable file (.out) is created  ##
