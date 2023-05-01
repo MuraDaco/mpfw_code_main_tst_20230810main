@@ -1,4 +1,3 @@
-
 ##################################################################################
 ## _______________________________________________________________________________
 ## RELATIVE PATH Definitions
@@ -7,6 +6,5 @@
 ## Relative path from CMakeLists.txt project folder                             ##
 ##################################################################################
 
-set(RELATIVE_PATH__SRC                      ${RELATIVE_PATH__MAIN_APP}/src/${WP_PLATFORM_STR}/source                                 )
-set(RELATIVE_PATH__COMMON                   ${RELATIVE_PATH__MAIN_APP}/src/common                                                    )
 
+set(RELATIVE_PATH__MAIN_XXX_PRJ                         ${RELATIVE_PATH__MAIN_XXX}/wsp/cmake/project/subdir/${MPFW_APPS_VER_DIR}        )
