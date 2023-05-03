@@ -2,18 +2,18 @@ message(STATUS "---- start section of <module_main_${MAIN_NAME}> module ")
 
 # step 1 - 1st level path definition
 include(set_code_build_dirs.cmake )
-set(CODE_CMAKE_MODULES_DIR      ${CODE_DIR}/${CMAKE_MODULES_RPATH} )
-include(${CODE_CMAKE_MODULES_DIR}/set_apps_libs_dirs.cmake )
+set(CODE_CMAKE_MODULE_VER_DIR      ${CODE_DIR}/${CMAKE_MODULE_VER_RPATH} )
+include(${CODE_DIR}/${CMAKE_MODULE_RPATH}/set_apps_libs_dirs.cmake )
 
 
 # step 2 - 2nd level path definition of depended modules
-include(include_dependencies.cmake           )
+include(include_dependencies.cmake )
 
 # step 3 - set cpp sources files
-include(../../${WP_PLATFORM_STR}/set_cpp_files.cmake                        )
+include(../../${WP_PLATFORM_STR}/set_cpp_files.cmake )
 
 # step 4 - post build parameter (copy executable file into development environment build directory )
-include(../../${WP_PLATFORM_STR}/set_dev_environment_build_dir.cmake        )
+include(../../${WP_PLATFORM_STR}/set_dev_environment_build_dir.cmake )
 
 
 ## ******************************************************************
@@ -38,8 +38,8 @@ target_link_libraries(${EXECUTABLE} PRIVATE
     ${LIB_SDK_PLATFORM}
 )
 
-include(${LIBS_SDK_PLATFORM_CMAKE_PUBLIC_DIR}/compile_option_${WP_PLATFORM_STR}.cmake                      )
-include(${APPS_XXX_PUBLIC_DIR}/module_app_${APP_NAME}_compile_def.cmake                                  )
-include(../../${WP_PLATFORM_STR}/tool_cmd.cmake)
+include(${LIBS_SDK_PLATFORM_CMAKE_PUBLIC_DIR}/toolchain_compile_option.cmake )
+include(${APPS_XXX_PUBLIC_DIR}/module_app_${APP_NAME}_compile_def.cmake )
+include(${LIBS_SDK_PLATFORM_CMAKE_PUBLIC_DIR}/toolchain_link_option.cmake )
 
 message(STATUS "---- end   section of <module_main_${MAIN_NAME}> module ")
