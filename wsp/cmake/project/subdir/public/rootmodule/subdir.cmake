@@ -1,13 +1,13 @@
-if(RELATIVE_PATH__LIBS_SDK_PLATFORM_PRJ)
-    add_subdirectory(${RELATIVE_PATH__LIBS_SDK_PLATFORM_PRJ})
+if(LIBS_SDK_PLATFORM_PRJ_DIR)
+    add_subdirectory(${LIBS_SDK_PLATFORM_PRJ_DIR})
 endif()
 
-add_subdirectory(${RELATIVE_PATH__LIBS_FW2_CORE_CORE_PRJ})
+add_subdirectory(${LIBS_FW2_CORE_CORE_PRJ_DIR})
 
-add_subdirectory(${RELATIVE_PATH__LIBS_FW2_WP_KR_PRJ})
+add_subdirectory(${LIBS_FW2_WRAPPER_CORE_PRJ_DIR})
 
-add_subdirectory(${RELATIVE_PATH__LIBS_FW2_WP_RS_PRJ})
+add_subdirectory(${LIBS_FW2_WRAPPER_RESOURCES_PRJ_DIR})
 
-add_subdirectory(${RELATIVE_PATH__APPS_XXX_PRJ})
+add_subdirectory(${APPS_XXX_PRJ_DIR})
 
-add_subdirectory(${RELATIVE_PATH__MAIN_XXX_PRJ})
+add_subdirectory(${MAIN_XXX_DIR_PRJ})

@@ -7,4 +7,5 @@
 ##################################################################################
 
 
-set(RELATIVE_PATH__MAIN_XXX_PRJ                         ${RELATIVE_PATH__MAIN_XXX}/wsp/cmake/project/subdir/${MPFW_APPS_VER_DIR}        )
+set(MAIN_XXX_DIR                             main/mpfw_code_main_${MAIN_NAME} )
+

@@ -1,5 +1,5 @@
 target_link_options(${EXECUTABLE} PRIVATE
-    -L${BUILD_RELATIVE_PATH__SDK_NXP}/libs                  # di default questa opzione se non presente 
+    -L${LIBS_SDK_PLATFORM_OBJ_LIB_DIR__FROM_BUILD}/libs                  # di default questa opzione se non presente 
     -nostdlib 
     -Wl,-Map=${PROJECT_NAME}.map
     -Wl,--gc-sections
@@ -31,11 +31,11 @@ add_custom_command(TARGET ${EXECUTABLE}
     POST_BUILD
     COMMAND arm-none-eabi-objcopy -O ihex ${EXECUTABLE} ${PROJECT_NAME}.hex
     COMMAND arm-none-eabi-objcopy -O binary ${EXECUTABLE} ${PROJECT_NAME}.bin
-    COMMAND [ -d ${BUILD_RELATIVE_PATH__XPRESSO_PRJ} ] || mkdir ${BUILD_RELATIVE_PATH__XPRESSO_PRJ}
-    COMMAND cp ${EXECUTABLE} ${BUILD_RELATIVE_PATH__XPRESSO_PRJ} 
+    COMMAND [ -d ${PLATFORM_ENVIRONMENT_BUILD_DIR} ] || mkdir ${PLATFORM_ENVIRONMENT_BUILD_DIR}
+    COMMAND cp ${EXECUTABLE} ${PLATFORM_ENVIRONMENT_BUILD_DIR} 
 )
 
 add_custom_command(TARGET ${EXECUTABLE}
     POST_BUILD
-    COMMENT "nxp - Platform selected: ${WP_PLATFORM_STR} - Config fw2_lib folder: ${FW2_LIB_CONFIG_DIR} - fw2 cmake files folder: ${RELATIVE_PATH__LIBS_FW2_CORE_CORE_PRJ}"
+    COMMENT "nxp - Platform selected: ${WP_PLATFORM_STR} - Config fw2_lib folder: ${FW2_LIB_CONFIG_DIR} - fw2 cmake files folder: ${LIBS_FW2_CORE_CORE_PRJ_DIR}"
 )

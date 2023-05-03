@@ -1,10 +1,10 @@
 
-set(RELATIVE_PATH__SRC                      ${RELATIVE_PATH__MAIN_APP}/src/${WP_PLATFORM_STR}/source                                 )
-set(RELATIVE_PATH__COMMON                   ${RELATIVE_PATH__MAIN_APP}/src/common                                                    )
+set(MAIN_XXX_SRC_DIR                      ${MAIN_XXX_DIR}/src/${WP_PLATFORM_STR}/source                                 )
+set(MAIN_XXX_SRC_COMMON_DIR                   ${MAIN_XXX_DIR}/src/common                                                    )
 
 set(CODE_DIR_APP_SOURCE_MAIN_INCLUDE
-    ${RELATIVE_PATH__SRC}
-    ${RELATIVE_PATH__LIBS}
-    ${RELATIVE_PATH__APPS}
+    ${MAIN_XXX_SRC_DIR}
+    ${LIBS_DIR}
+    ${APPS_DIR}
 
 )

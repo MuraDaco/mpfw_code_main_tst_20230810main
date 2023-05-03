@@ -1,9 +1,9 @@
 message(STATUS "---- start section of <module_main_${MAIN_NAME}> module ")
 
 # step 1 - 1st level path definition
-include(set_code_build_dirs.cmake)
-set(CODE_CMAKE_MODULES_DIR          ${RELATIVE_PATH__CODE}/${GLOBAL_CMAKE_MODULES_PATH}         )
-include(${CODE_CMAKE_MODULES_DIR}/set_apps_libs_dirs.cmake                                      )
+include(set_code_build_dirs.cmake )
+set(CODE_CMAKE_MODULES_DIR      ${CODE_DIR}/${CMAKE_MODULES_RPATH} )
+include(${CODE_CMAKE_MODULES_DIR}/set_apps_libs_dirs.cmake )
 
 
 # step 2 - 2nd level path definition of depended modules
@@ -16,10 +16,6 @@ include(../../${WP_PLATFORM_STR}/set_cpp_files.cmake                        )
 include(../../${WP_PLATFORM_STR}/set_dev_environment_build_dir.cmake        )
 
 
-# debug section: some testing messages
-message(STATUS "fw2 cmake files folder: ${RELATIVE_PATH__LIBS_FW2_CORE_CORE_PRJ}")
-message(STATUS "app name: ${APP_NAME}")
-
 ## ******************************************************************
 ## __________________________________________________________________
 ## TST/APP CPP FILES Definitions
@@ -29,9 +25,6 @@ set(EXECUTABLE ${PROJECT_NAME}.out)
 add_executable(${EXECUTABLE} 
     ${CODE_APP_SOURCE_MAIN}
 )
-
-include(${RELATIVE_PATH__LIBS_SDK_PLATFORM_PUBLIC}/compile_option_${WP_PLATFORM_STR}.cmake                      )
-include(${RELATIVE_PATH__APPS_PUBLIC}/module_app_${APP_NAME}_compile_def.cmake                                  )
 
 target_include_directories(${EXECUTABLE} PRIVATE
     ${CODE_DIR_APP_SOURCE_MAIN_INCLUDE}
@@ -45,6 +38,8 @@ target_link_libraries(${EXECUTABLE} PRIVATE
     ${LIB_SDK_PLATFORM}
 )
 
+include(${LIBS_SDK_PLATFORM_CMAKE_PUBLIC_DIR}/compile_option_${WP_PLATFORM_STR}.cmake                      )
+include(${APPS_XXX_PUBLIC_DIR}/module_app_${APP_NAME}_compile_def.cmake                                  )
 include(../../${WP_PLATFORM_STR}/tool_cmd.cmake)
 
 message(STATUS "---- end   section of <module_main_${MAIN_NAME}> module ")

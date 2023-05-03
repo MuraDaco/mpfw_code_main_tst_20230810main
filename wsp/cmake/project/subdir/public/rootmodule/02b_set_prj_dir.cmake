@@ -7,5 +7,4 @@
 ##################################################################################
 
 
-set(RELATIVE_PATH__MAIN_XXX                             main/mpfw_code_main_tst_20221229                           )
-
+set(MAIN_XXX_DIR_PRJ                         ${MAIN_XXX_DIR}/wsp/cmake/project/subdir/${MPFW_MAIN_VER_DIR}        )
