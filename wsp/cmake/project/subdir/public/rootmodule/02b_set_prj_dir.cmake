@@ -7,4 +7,4 @@
 ##################################################################################
 
 
-set(MAIN_XXX_DIR_PRJ                         ${MAIN_XXX_DIR}/wsp/cmake/project/subdir/${MPFW_MAIN_VER_DIR}        )
+set(MAIN_XXX_DIR_PRJ        ${MAIN_XXX_RPATH}/wsp/cmake/project/subdir/${MPFW_MAIN_VER_DIR} )

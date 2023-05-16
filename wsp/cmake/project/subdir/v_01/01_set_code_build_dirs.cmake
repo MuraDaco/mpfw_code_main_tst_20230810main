@@ -9,9 +9,10 @@
 
 # app folder: relative path of "tst_20221206" directory from CMakeLists.txt project folder
 # root folder: relative path of "code" directory (project root folder) respect CMakeLists.txt project folder
-set(CODE_DIR    ../../../../../../.. )
-set(MAIN_DIR    ${CODE_DIR}/main )
-set(MAIN_XXX_DIR    ${MAIN_DIR}/mpfw_code_main_${MAIN_NAME} )
+set(CODE_DIR        ../../../../../../.. )
+set(MAIN_XXX_DIR        ${CODE_DIR}/${MAIN_XXX_RPATH} )
+set(MAIN_XXX_SRC_DIR        ${CODE_DIR}/${MAIN_XXX_SRC_RPATH} )
+set(MAIN_XXX_SRC_COMMON_DIR     ${CODE_DIR}/${MAIN_XXX_SRC_COMMON_RPATH} )
 
 ##################################################################################
 ## Relative path from build folder where the executable file (.out) is created  ##

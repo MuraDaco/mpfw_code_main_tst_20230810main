@@ -1,13 +1,14 @@
 message(STATUS "---- start section of <module_main_${MAIN_NAME}> module ")
 
+
 # step 1 - 1st level path definition
-include(set_code_build_dirs.cmake )
+include(01_set_code_build_dirs.cmake )
 set(CODE_CMAKE_MODULE_VER_DIR      ${CODE_DIR}/${CMAKE_MODULE_VER_RPATH} )
 include(${CODE_DIR}/${CMAKE_MODULE_RPATH}/set_apps_libs_dirs.cmake )
 
 
 # step 2 - 2nd level path definition of depended modules
-include(include_dependencies.cmake )
+include(02_include_dependencies.cmake )
 
 # step 3 - set cpp sources files
 include(../../${WP_PLATFORM_STR}/set_cpp_files.cmake )

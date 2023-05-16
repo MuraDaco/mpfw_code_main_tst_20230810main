@@ -7,5 +7,5 @@
 ##################################################################################
 
 
-set(MAIN_XXX_DIR                             main/mpfw_code_main_${MAIN_NAME} )
+set(MAIN_XXX_RPATH      main/mpfw_code_main_${MAIN_NAME} )
 
