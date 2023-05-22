@@ -7,4 +7,4 @@
 ##################################################################################
 
 
-set(CODE_MAIN_CMAKE_MAIN_TST_20221229_VER_DEF_DIR       ${MAIN_CMAKE_PUBLIC_DIR}/main/mpfw_code_main_${MAIN_NAME} )
+set(CODE_MAIN_CMAKE_MAIN_tst_20230522_VER_DEF_DIR       ${MAIN_CMAKE_PUBLIC_DIR}/main/mpfw_code_main_${MAIN_NAME} )
