@@ -22,6 +22,5 @@ include(libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/publi
 include(apps/mpfw_code_apps_${APP_NAME}/wsp/cmake/project/public/set_prj_dir.cmake                          )
 ##
 include(${MAIN_CMAKE_PUBLIC_ROOTMODULE_RPATH}/02b_set_prj_dir.cmake )
-
 include(${MAIN_CMAKE_PUBLIC_ROOTMODULE_RPATH}/02c_set_src_dir.cmake )
 include(${MAIN_CMAKE_PUBLIC_ROOTMODULE_RPATH}/02d_include_set_conf_dirs.cmake )

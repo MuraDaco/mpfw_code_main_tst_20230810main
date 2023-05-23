@@ -1,9 +1,10 @@
 message(STATUS "---- start section of <module_main_${MAIN_NAME}> module ")
+enable_language( ASM)
 
 
 # step 1 - 1st level path definition
 include(01_set_code_build_dirs.cmake )
-set(CODE_CMAKE_MODULE_VER_DIR      ${CODE_DIR}/${CMAKE_MODULE_VER_RPATH} )
+set(CODE_CMAKE_MODULE_VER_DIR       ${CODE_DIR}/${CMAKE_MODULE_VER_RPATH} )
 include(${CODE_DIR}/${CMAKE_MODULE_RPATH}/set_apps_libs_dirs.cmake )
 
 
@@ -21,7 +22,7 @@ include(../../${WP_PLATFORM_STR}/set_dev_environment_build_dir.cmake )
 ## __________________________________________________________________
 ## TST/APP CPP FILES Definitions
 
-set(EXECUTABLE ${PROJECT_NAME}.out)
+set(EXECUTABLE ${PROJECT_NAME}.out )
 
 add_executable(${EXECUTABLE} 
     ${CODE_APP_SOURCE_MAIN}
