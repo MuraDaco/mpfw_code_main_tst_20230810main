@@ -18,7 +18,7 @@ set(CODE_APP_STARTUP_ASM
 set(CODE_APP_SRC
     ${MAIN_XXX_SRC_DIR}/main.cpp
     ${MAIN_XXX_SRC_DIR}/freertos/freertos.c
-    ${MAIN_XXX_SRC_DIR}/freertos/port.c
+    # ${MAIN_XXX_SRC_DIR}/freertos/port.c
     ${MAIN_XXX_SRC_DIR}/interrupt/stm32f7xx_it.c
     ${MAIN_XXX_SRC_DIR}/startup/system_stm32f7xx.c
     ${MAIN_XXX_SRC_DIR}/uart/stm32f7xx_hal_msp.c

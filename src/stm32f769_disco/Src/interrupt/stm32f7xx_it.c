@@ -97,14 +97,14 @@ void UsageFault_Handler(void)
   }
 }
 
-// -- freertos -- /**
-// -- freertos --   * @brief  This function handles SVCall exception.
-// -- freertos --   * @param  None
-// -- freertos --   * @retval None
-// -- freertos --   */
-// -- freertos -- void SVC_Handler(void)
-// -- freertos -- {
-// -- freertos -- }
+/**
+  * @brief  This function handles SVCall exception.
+  * @param  None
+  * @retval None
+  */
+void SVC_Handler(void)
+{
+}
 
 /**
   * @brief  This function handles Debug Monitor exception.
@@ -115,24 +115,24 @@ void DebugMon_Handler(void)
 {
 }
 
-// -- freertos -- /**
-// -- freertos --   * @brief  This function handles PendSVC exception.
-// -- freertos --   * @param  None
-// -- freertos --   * @retval None
-// -- freertos --   */
-// -- freertos -- void PendSV_Handler(void)
-// -- freertos -- {
-// -- freertos -- }
-// -- freertos -- 
-// -- freertos -- /**
-// -- freertos --   * @brief  This function handles SysTick Handler.
-// -- freertos --   * @param  None
-// -- freertos --   * @retval None
-// -- freertos --   */
-// -- freertos -- void SysTick_Handler(void)
-// -- freertos -- {
-// -- freertos --   HAL_IncTick();
-// -- freertos -- }
+/**
+  * @brief  This function handles PendSVC exception.
+  * @param  None
+  * @retval None
+  */
+void PendSV_Handler(void)
+{
+}
+
+/**
+  * @brief  This function handles SysTick Handler.
+  * @param  None
+  * @retval None
+  */
+void SysTick_Handler(void)
+{
+  HAL_IncTick();
+}
 
 /******************************************************************************/
 /*                 STM32F7xx Peripherals Interrupt Handlers                   */

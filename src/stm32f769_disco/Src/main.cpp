@@ -19,33 +19,34 @@
   ******************************************************************************
   */
 
-/// lib include
-#include "krInitStaticManager.h"
-using namespace fw2::core::core;
-
-#include "krThreadManager.h"
-using namespace fw2::wrapper::core;
+// /// lib include
+// #include "krInitStaticManager.h"
+// using namespace fw2::core::core;
+// 
+// #include "krThreadManager.h"
+// using namespace fw2::wrapper::core;
 
 #include "rsSerial.h"
 using namespace fw2::wrapper::resources;
 
-// tst include
-#include "mn/mg/tt_MainManager.h"
-#include "sv/svSync/v_01/mn/tt_mn_svSyncMain.h"
-
-// tst/tb include
-#include "tb/kr/krInit/v_02/krInitStaticTbl.h"
-#include "tb/kr/krThread/v_02/krThreadTbl.h"
-#include "tb/kr/krTimer/v_02/krTimerTbl.h"
-#include "tb/sv/svStateMachine/v_02/svStateMachineTbl.h"
-using namespace mpfw::libs::tst_20221206;
+// // tst include
+// #include "mn/mg/tt_MainManager.h"
+// #include "sv/svSync/v_01/mn/tt_mn_svSyncMain.h"
+// 
+// // tst/tb include
+// #include "tb/kr/krInit/v_02/krInitStaticTbl.h"
+// #include "tb/kr/krThread/v_02/krThreadTbl.h"
+// #include "tb/kr/krTimer/v_02/krTimerTbl.h"
+// #include "tb/sv/svStateMachine/v_02/svStateMachineTbl.h"
+// using namespace mpfw::libs::tst_20221206;
 
 
 int main(void) {
 //    // ***************************************************************************
 //    rsSerial::Tx("START  - Init static functions"); rsSerial::Tx(rsSerial::endl);
 //    rsSerial::Tx(rsSerial::endl);
-    krInitStaticManager::LoopOnUnits();
+    //krInitStaticManager::LoopOnUnits();
+    rsSerial::Init2();
     rsSerial::Tx(rsSerial::endl);
 
     // /* attach 12 MHz clock to FLEXCOMM8 (I2C master) */
@@ -70,10 +71,10 @@ int main(void) {
     rsSerial::Tx(rsSerial::endl);
     rsSerial::Tx(rsSerial::endl);
 
-    // ***************************************************************************
-    rsSerial::Tx("START  - Threads definition and then run them"); rsSerial::Tx(rsSerial::endl);
-    rsSerial::Tx(rsSerial::endl);
-    krThreadManager::InitThenRun();
+    // -- // ***************************************************************************
+    // -- rsSerial::Tx("START  - Threads definition and then run them"); rsSerial::Tx(rsSerial::endl);
+    // -- rsSerial::Tx(rsSerial::endl);
+    // -- krThreadManager::InitThenRun();
 
 
     return 0 ;
