@@ -1,6 +1,26 @@
 
 ---
 
+Thursday, 29th June 2023
+
+work@umtiefs-MBP mpfw_code_main_tst_20230522 % git merge main                                   
+Updating efe8367..a38f9b8
+Fast-forward
+ .gitignore                                               |   1 -
+ doc/note_20230522_build.md                               | 248 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++--------------------------
+ src/stm32f769_disco/Inc/freertos/FreeRTOSConfig.h        |  11 +---
+ src/stm32f769_disco/Src/freertos/freertos.c              |  57 +++++++++++++++-----
+ src/stm32f769_disco/Src/freertos/{port.c => port.c_not}  |   0
+ src/stm32f769_disco/Src/interrupt/stm32f7xx_it.c         |  16 +++---
+ src/stm32f769_disco/Src/main.cpp                         |   1 +
+ wsp/cmake/project/stm32f769_disco/set_cpp_files.cmake    |   2 +-
+ wsp/cube/workspace/stm32f769_disco/.metadata/version.ini |   2 +-
+ 9 files changed, 231 insertions(+), 107 deletions(-)
+ rename src/stm32f769_disco/Src/freertos/{port.c => port.c_not} (100%)
+work@umtiefs-MBP mpfw_code_main_tst_20230522 % 
+
+---
+
 Wednesday, 28th June 2023
 
 - il problema compare quando si compilano le tabelle dei timer e quindi si usa la funzione delay del freertor
