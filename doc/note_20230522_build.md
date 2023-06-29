@@ -3,6 +3,14 @@
 
 Thursday, 29th June 2023
 
+work@umtiefs-MBP mpfw_code_apps_tst_20221206 % git merge main
+Updating c7c7af1..3d7faa6
+Fast-forward
+ src/tb/kr/krThread/v_02/krThreadTbl.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+work@umtiefs-MBP mpfw_code_apps_tst_20221206 % 
+
+
 work@umtiefs-MBP mpfw_code_main_tst_20230522 % git merge main                                   
 Updating efe8367..a38f9b8
 Fast-forward
