@@ -40,6 +40,9 @@ using namespace fw2::wrapper::resources;
 #include "tb/sv/svStateMachine/v_02/svStateMachineTbl.h"
 using namespace mpfw::libs::tst_20221206;
 
+#include "stm32f7xx_hal.h"
+
+uint8_t rx_buffer[6];
 
 int main(void) {
 //    // ***************************************************************************
@@ -74,7 +77,17 @@ int main(void) {
     // ***************************************************************************
     rsSerial::Tx("START  - Threads definition and then run them"); rsSerial::Tx(rsSerial::endl);
     rsSerial::Tx(rsSerial::endl);
-    krThreadManager::InitThenRun();
+    // krThreadManager::InitThenRun();
+
+    while (1) {
+
+    	// HAL_Delay(1000);
+      rsSerial::Rx(rx_buffer,6-1);
+      rx_buffer[5]=0;
+      rsSerial::Tx("Loop"); rsSerial::Tx(rsSerial::endl);
+      rsSerial::Tx(rx_buffer); rsSerial::Tx(rsSerial::endl);
+
+    }
 
 
     return 0 ;
