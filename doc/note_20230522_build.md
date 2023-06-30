@@ -3,6 +3,28 @@
 
 Thursday, 29th June 2023
 
+
+***************
+
+***************
+
+***************
+
+Finished building target: tst_20230522.elf
+ 
+arm-none-eabi-size   tst_20230522.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24780	     88	   2592	  27460	   6b44	tst_20230522.elf
+Finished building: default.size.stdout
+ 
+arm-none-eabi-objdump -h -S  tst_20230522.elf  > "tst_20230522.list"
+Finished building: tst_20230522.list
+ 
+
+10:32:18 Build Finished. 0 errors, 0 warnings. (took 2s.251ms)
+
+***************
+
 work@umtiefs-MBP mpfw_code_apps_tst_20221206 % git merge main
 Updating c7c7af1..3d7faa6
 Fast-forward
