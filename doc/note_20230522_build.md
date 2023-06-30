@@ -1,6 +1,49 @@
 
 ---
 
+Friday, 30th June 2023
+
+- analisi della procedura di sostituzione del SysTick con un altro interrupt timer
+    - le funzioni che vengono cambiate/"sovrascritte" sono
+        - HAL_InitTick(uint32_t TickPriority)
+            - 
+        - HAL_SuspendTick(void)
+        - HAL_ResumeTick(void)
+    - le funzioni di cui sopra gestiscono i registri relativi all'interrupt timer
+    - la funzione che implementa l'handler dell'interrupt è la seguente
+        - stm_20230504
+            - stm32f7xx_it.c
+                - TIM6_DAC_IRQHandler
+                    - HAL_TIM_IRQHandler
+
+/**
+  * @brief This function handles TIM6 global interrupt, DAC1 and DAC2 underrun error interrupts.
+  */
+void TIM6_DAC_IRQHandler(void)
+{
+  /* USER CODE BEGIN TIM6_DAC_IRQn 0 */
+
+  /* USER CODE END TIM6_DAC_IRQn 0 */
+  HAL_TIM_IRQHandler(&htim6);
+  /* USER CODE BEGIN TIM6_DAC_IRQn 1 */
+
+  /* USER CODE END TIM6_DAC_IRQn 1 */
+}
+
+
+__STATIC_INLINE void __NVIC_EnableIRQ(IRQn_Type IRQn)
+{
+  if ((int32_t)(IRQn) >= 0)
+  {
+    NVIC->ISER[(((uint32_t)IRQn) >> 5UL)] = (uint32_t)(1UL << (((uint32_t)IRQn) & 0x1FUL));
+  }
+}
+
+
+#define __HAL_TIM_ENABLE_IT(__HANDLE__, __INTERRUPT__)    ((__HANDLE__)->Instance->DIER |= (__INTERRUPT__))
+
+---
+
 Thursday, 29th June 2023
 
 work@umtiefs-MBP mpfw_code_apps_tst_20221206 % git merge main
