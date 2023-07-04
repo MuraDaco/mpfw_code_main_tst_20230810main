@@ -9,16 +9,16 @@
          <vendor>NXP</vendor>
          <memory id="Flash"
                  type="Flash"
-                 size="0"
+                 size="512"
                  is_ro="true"
                  can_program="true"/>
-         <memory id="RAM" type="RAM" size="0"/>
+         <memory id="RAM" type="RAM" size="192"/>
          <memoryInstance id="PROGRAM_FLASH"
                          derived_from="Flash"
                          location="0x00000000"
                          size="0x00080000"
                          driver="LPC5460x_512K.cfx"/>
-         <memoryInstance id="SRAM_0_1_2_3"
+         <memoryInstance id="SRAM_UPPER"
                          derived_from="RAM"
                          location="0x20000000"
                          size="0x00028000"/>
