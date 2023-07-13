@@ -44,30 +44,14 @@ using namespace fw2::wrapper::core;
 #include "rsSerial.h"
 using namespace fw2::wrapper::resources;
 
-// tst include
-#include "mn/mg/tt_MainManager.h"
-#include "sv/svSync/v_01/mn/tt_mn_svSyncMain.h"
-
-// tst/tb include
-#include "tb/kr/krInit/v_02/krInitStaticTbl.h"
-#include "tb/kr/krThread/v_02/krThreadTbl.h"
-#include "tb/kr/krTimer/v_02/krTimerTbl.h"
-#include "tb/sv/svStateMachine/v_02/svStateMachineTbl.h"
-using namespace mpfw::libs::tst_20221206;
+#include "app/krInitStaticTbl.h"
+using namespace mpfw::apps;
 
 
 int main(void) {
-//    // ***************************************************************************
-//    rsSerial::Tx("START  - Init static functions"); rsSerial::Tx(rsSerial::endl);
-//    rsSerial::Tx(rsSerial::endl);
+    // ***************************************************************************
     krInitStaticManager::LoopOnUnits();
     rsSerial::Tx(rsSerial::endl);
-
-    // /* attach 12 MHz clock to FLEXCOMM8 (I2C master) */
-    // CLOCK_AttachClk(kFRO12M_to_FLEXCOMM8);
-    // /* reset FLEXCOMM for I2C */
-    // RESET_PeripheralReset(kFC8_RST_SHIFT_RSTn);
-    // BOARD_InitBootPins();
 
     // ***************************************************************************
     // ...........1234567890123456789012345678901234567890

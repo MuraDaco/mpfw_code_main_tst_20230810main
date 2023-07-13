@@ -20,24 +20,24 @@ using namespace std::chrono_literals; // ns, us, ms, s, h, etc.
 #include "main.h"
 
 // lib include
-#include "krInitStaticManager.h"
+#include <krInitStaticManager.h>
 using namespace fw2::core::core;
 
-#include "krThreadManager.h"
+#include <krThreadManager.h>
 using namespace fw2::wrapper::core;
 
-#include "rsSerial.h"
+#include <rsSerial.h>
 using namespace fw2::wrapper::resources;
 
 // tst include
-#include "mn/mg/tt_MainManager.h"
-#include "sv/svSync/v_01/mn/tt_mn_svSyncMain.h"
+#include <tt_MainManager.h>
+#include <mn/tt_mn_svSyncMain.h>
 
 // tst/tb include
-#include "tb/kr/krThread/v_02/krThreadTbl.h"
-#include "tb/kr/krTimer/v_02/krTimerTbl.h"
-#include "tb/sv/svStateMachine/v_02/svStateMachineTbl.h"
-using namespace mpfw::libs::tst_20221206;
+#include <app/krThreadTbl.h>
+#include <app/krTimerTbl.h>
+#include <app/svStateMachineTbl.h>
+using namespace mpfw::apps;
 
 
 int main()

@@ -13,9 +13,6 @@
     #error WRONG PLATFORM SELECTED !!!!
 #endif
 
-#if !defined(TST_20221206)
-    #error TST APP NOT SELECTED !!!!
-#endif
 
 #include "cg_krThread.h"
 

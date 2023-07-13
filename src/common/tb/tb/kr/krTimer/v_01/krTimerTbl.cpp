@@ -9,12 +9,12 @@
 #include "krTimerTbl.h"
 
 // lib include
-#include "mpfw_code_apps_tst_20221206/src/tb/kr/krTimer/v_02/krTimerTbl.h"
+#include <app/krTimerTbl.h>
 
 namespace fw2 { namespace core { namespace core {
 
 krTimer** krTimerTbl::krTimerPtr2Array[] = {
-    mpfw::libs::   tst_20221206::krTimerTbl::TimerPtrArray	,
+    mpfw::apps::krTimerTbl::TimerPtrArray	,
 	nullptr
 };
 

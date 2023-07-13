@@ -7,7 +7,7 @@
 ##################################################################################
 
 
-# app folder: relative path of "tst_20221206" directory from CMakeLists.txt project folder
+# app folder: relative path of "<app name>" directory from CMakeLists.txt project folder
 # root folder: relative path of "code" directory (project root folder) respect CMakeLists.txt project folder
 set(CODE_DIR        ../../../../../../.. )
 set(MAIN_XXX_DIR        ${CODE_DIR}/${MAIN_XXX_RPATH} )

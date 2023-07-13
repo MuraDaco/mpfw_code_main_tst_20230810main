@@ -1,5 +1,5 @@
 
-include(${CODE_MAIN_CMAKE_MAIN_tst_20230522_VER_DEF_DIR}/set_class_src_ver.cmake)
+include(${CODE_MAIN_CMAKE_MAIN_VER_DEF_DIR}/set_class_src_ver.cmake)
 
 set(CONF_DIR
     ${SDK_PLATFORM_CONF_DIR}

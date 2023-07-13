@@ -9,12 +9,13 @@
 #include "svStateMachineTbl.h"
 
 // lib include
-#include "mpfw_code_apps_tst_20221206/src/tb/sv/svStateMachine/v_02/svStateMachineTbl.h"
+#include <app/svStateMachineTbl.h>
+
 
 namespace fw2 { namespace core { namespace core {
 
 svStateMachine** svStateMachineTbl::UnitsArray2[] = {
-    mpfw::libs::   tst_20221206::svStateMachineTbl::UnitsArray	,
+    mpfw::apps::svStateMachineTbl::UnitsArray	,
 	nullptr
 };
 

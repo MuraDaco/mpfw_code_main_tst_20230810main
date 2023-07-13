@@ -43,7 +43,17 @@
 									<listOptionValue builtIn="false" value="${CODE_DIR}/libs"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/${MAIN_NAME}/${FW2_WRAPPER_CORE_CONF_RPATH}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/${MAIN_NAME}/${SDK_PLATFORM_CONF_RPATH}}"/>
-									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/cg}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/kr/krThread/v_${tst_20230703app_AP_KR_THREAD02_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/kr/krTimer/v_${tst_20230703app_AP_KR_TIMER01_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/mn/mg}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/sv/svState/v_${tst_20230703app_AP_SV_STATE_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/sv/svStateMachine/v_${tst_20230703app_AP_SV_STATE_MACHINE_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/sv/svSync/v_${tst_20230703app_AP_SV_SYNC_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/tb/kr/krInit/v_${tst_20230703app_TB_KR_INIT_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/tb/kr/krThread/v_${tst_20230703app_TB_KR_THREAD_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/tb/kr/krTimer/v_${tst_20230703app_TB_KR_TIMER_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/tb/sv/svStateMachine/v_${tst_20230703app_TB_SV_STATE_MACHINE_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_wrapper_resources/nxp/src/rs/rsSerial/v_${fw2_wrapper_resources_RS_SERIAL_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_core_core/src/cg}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_core_core/src/cs}"/>
@@ -230,7 +240,17 @@
 									<listOptionValue builtIn="false" value="${CODE_DIR}/libs"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/${MAIN_NAME}/${FW2_WRAPPER_CORE_CONF_RPATH}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/${MAIN_NAME}/${SDK_PLATFORM_CONF_RPATH}}"/>
-									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/cg}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/kr/krThread/v_${tst_20230703app_AP_KR_THREAD02_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/kr/krTimer/v_${tst_20230703app_AP_KR_TIMER01_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/mn/mg}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/sv/svState/v_${tst_20230703app_AP_SV_STATE_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/sv/svStateMachine/v_${tst_20230703app_AP_SV_STATE_MACHINE_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/sv/svSync/v_${tst_20230703app_AP_SV_SYNC_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/tb/kr/krInit/v_${tst_20230703app_TB_KR_INIT_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/tb/kr/krThread/v_${tst_20230703app_TB_KR_THREAD_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/tb/kr/krTimer/v_${tst_20230703app_TB_KR_TIMER_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/tst_20230703app/src/tb/sv/svStateMachine/v_${tst_20230703app_TB_SV_STATE_MACHINE_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_wrapper_resources/nxp/src/rs/rsSerial/v_${fw2_wrapper_resources_RS_SERIAL_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_core_core/src/cg}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_core_core/src/cs}"/>
