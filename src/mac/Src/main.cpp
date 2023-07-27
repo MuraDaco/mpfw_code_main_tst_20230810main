@@ -26,6 +26,7 @@ using namespace fw2::core::core;
 #include <krThreadManager.h>
 using namespace fw2::wrapper::core;
 
+#include <sdk_usart.h>
 #include <rsSerial.h>
 using namespace fw2::wrapper::resources;
 
@@ -39,13 +40,23 @@ using namespace fw2::wrapper::resources;
 #include <app/svStateMachineTbl.h>
 using namespace mpfw::apps;
 
+void thread_service_rsSerial() {
+
+	while(1){if(!sdk_usart::loop()) break;}
+
+}
 
 int main()
 {
+    std::thread thread_service;
+
+    rsSerial::Init();
+	sdk_usart::start();
+
+    thread_service = std::thread(thread_service_rsSerial);
+
     // ***************************************************************************
-    rsSerial::Tx("START  - Init static functions"); rsSerial::Tx(rsSerial::endl);
-    rsSerial::Tx(rsSerial::endl);
-    krInitStaticManager::LoopOnUnits();
+    krInitStaticManager::LoopOnUnits();     
     rsSerial::Tx(rsSerial::endl);
 
     // ***************************************************************************
@@ -64,25 +75,29 @@ int main()
     // ***************************************************************************
     rsSerial::Tx("START  - Threads definition and then run them"); rsSerial::Tx(rsSerial::endl);
     rsSerial::Tx(rsSerial::endl);
-        krThreadManager::InitThenRun();
-    rsSerial::Tx(rsSerial::endl);
-
-    do {
-        sleep_for(10ms);
-    } while (tt_mn_svSyncMain::CheckRaceConditionCounter(10));
+    krThreadManager::InitThenRun();
     
+    // do {
+    //     sleep_for(10ms);
+    // } while (tt_mn_svSyncMain::CheckRaceConditionCounter(10));
+    
+
     // ***************************************************************************
     krThreadManager::Exit();
     rsSerial::Tx("EXIT  - from Main Loop"); rsSerial::Tx(rsSerial::endl);
     rsSerial::Tx(rsSerial::endl);
     rsSerial::Tx(rsSerial::endl);
 
-    // ***************************************************************************
-    rsSerial::Tx("SHOW  - Tests results"); rsSerial::Tx(rsSerial::endl);
-    rsSerial::Tx(rsSerial::endl);
-    tt_MainManager::LoopOnUnits();
-    rsSerial::Tx(rsSerial::endl);
+    //// ***************************************************************************
+    //rsSerial::Tx("SHOW  - Tests results"); rsSerial::Tx(rsSerial::endl);
+    //rsSerial::Tx(rsSerial::endl);
+    //tt_MainManager::LoopOnUnits();
+    //rsSerial::Tx(rsSerial::endl);
 
+
+    thread_service.join();
+
+	sdk_usart::end();
 
 }
 

@@ -6,7 +6,7 @@
 ## Relative path from CMakeLists.txt project folder                             ##
 ##################################################################################
 
-include(libs/mpfw_code_libs_sdk_${WP_PLATFORM_STR}/wsp/cmake/project/public/01_set_root_dirs.cmake )
+include(libs/mpfw_code_libs_sdk_${WP_PLATFORM_STR}/wsp/cmake/project/${MPFW_LIBS_SDK_PLATFORM_VER_DIR}/public/01_set_root_dirs.cmake )
 include(libs/mpfw_code_libs_fw2_wrapper_core/common/wsp/cmake/project/public/01_set_root_dirs.cmake )
 include(libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/public/01_set_root_dirs.cmake )
 include(libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/public/01_set_root_dirs.cmake )
@@ -15,7 +15,7 @@ include(apps/mpfw_code_apps_${APP_NAME}/wsp/cmake/project/public/set_root_dirs.c
 include(${MAIN_CMAKE_PUBLIC_ROOTMODULE_RPATH}/02a_set_root_dirs.cmake )
 
 
-include(libs/mpfw_code_libs_sdk_${WP_PLATFORM_STR}/wsp/cmake/project/public/set_prj_dir.cmake )
+include(libs/mpfw_code_libs_sdk_${WP_PLATFORM_STR}/wsp/cmake/project/${MPFW_LIBS_SDK_PLATFORM_VER_DIR}/public/set_prj_dir.cmake )
 include(libs/mpfw_code_libs_fw2_wrapper_core/common/wsp/cmake/project/public/set_prj_dir.cmake )
 include(libs/mpfw_code_libs_fw2_core_core/wsp/cmake/project/public/set_prj_dir.cmake )
 include(libs/mpfw_code_libs_fw2_wrapper_resources/common/wsp/cmake/project/public/set_prj_dir.cmake )

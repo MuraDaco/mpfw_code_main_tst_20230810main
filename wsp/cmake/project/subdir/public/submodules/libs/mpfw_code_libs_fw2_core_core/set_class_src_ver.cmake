@@ -12,6 +12,7 @@ set(SV_STATE_MACHINE_VER        03)
 set(DG_INTERFACE_VER            01)
 set(DG_FORMAT_DIGIT_VER         01)
 
+set(UY_PROTOCOL_VER             01)
 
 set(TB_KR_THREAD_VER            04)
 set(TB_KR_INIT_VER              02)
