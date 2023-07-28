@@ -66,6 +66,7 @@
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_core_core/src/sv/svState/v_${fw2_core_core_SV_STATE_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_core_core/src/sv/svStateMachine/v_${fw2_core_core_SV_STATE_MACHINE_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_core_core/src/sv/svSync/v_${fw2_core_core_SV_SYNC_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_core_core/src/uy/uyProtocol/v_${fw2_core_core_UY_PROTOCOL_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_wrapper_core/common/src/kr/krThread/v_${fw2_wrapper_core_KR_THREAD_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_wrapper_core/nxp/src/kr/krThread/v_${fw2_wrapper_core_KR_THREAD_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_wrapper_core/nxp/src/sy/syThread/v_${fw2_wrapper_core_SY_THREAD_VER}}"/>
@@ -263,6 +264,7 @@
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_core_core/src/sv/svState/v_${fw2_core_core_SV_STATE_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_core_core/src/sv/svStateMachine/v_${fw2_core_core_SV_STATE_MACHINE_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_core_core/src/sv/svSync/v_${fw2_core_core_SV_SYNC_VER}}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_core_core/src/uy/uyProtocol/v_${fw2_core_core_UY_PROTOCOL_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_wrapper_core/common/src/kr/krThread/v_${fw2_wrapper_core_KR_THREAD_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_wrapper_core/nxp/src/kr/krThread/v_${fw2_wrapper_core_KR_THREAD_VER}}"/>
 									<listOptionValue builtIn="false" value="${workspace_loc:/fw2_wrapper_core/nxp/src/sy/syThread/v_${fw2_wrapper_core_SY_THREAD_VER}}"/>
