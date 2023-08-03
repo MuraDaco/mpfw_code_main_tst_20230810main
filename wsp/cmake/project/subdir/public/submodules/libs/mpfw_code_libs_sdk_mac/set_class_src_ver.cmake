@@ -2,4 +2,4 @@
 ## __________________________________________________________________
 ## VERSION Definitions
 
-set(SDK_PLATFORM_LIB_VER             01)
+set(SDK_PLATFORM_LIB_VER             02)

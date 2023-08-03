@@ -38,6 +38,7 @@ target_link_libraries(${EXECUTABLE} PRIVATE
     fw2_wp_kr_lib
     fw2_lib
     ${LIB_SDK_PLATFORM}
+    fw2_wp_rs_lib
 )
 
 include(${LIBS_SDK_PLATFORM_CMAKE_PUBLIC_DIR}/toolchain_compile_option.cmake )
