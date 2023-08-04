@@ -2,5 +2,5 @@
 ## __________________________________________________________________
 ## VERSION Definitions
 
-set(RS_SERIAL_VER           04  )
+set(RS_SERIAL_VER           05  )
 set(TB_KR_INIT_VER          02  )
