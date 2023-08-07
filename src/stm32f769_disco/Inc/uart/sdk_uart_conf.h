@@ -70,6 +70,16 @@ extern "C" {
 
 
 
+// rs485 tx/rx enable pin
+#define RS485_TX_RX_ENABLE_GPIO_CLK_ENABLE()        __HAL_RCC_GPIOJ_CLK_ENABLE()
+
+#define RS485_TX_ENABLE_GPIO_PORT                   ((GPIO_TypeDef*)GPIOJ)
+#define RS485_TX_ENABLE_GPIO_PIN                    ((uint32_t)GPIO_PIN_0) // CN13 - D4 (la numerazione parte da D0 e va in su)
+
+#define RS485_RX_ENABLE_GPIO_PORT                   ((GPIO_TypeDef*)GPIOJ)
+#define RS485_RX_ENABLE_GPIO_PIN                    ((uint32_t)GPIO_PIN_1) // CN13 - D2
+
+
 
 
 

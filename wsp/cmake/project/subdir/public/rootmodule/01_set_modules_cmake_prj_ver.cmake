@@ -1,10 +1,10 @@
-set(MPFW_CMAKE_VER                                      02)
+set(MPFW_CMAKE_VER                                      03)
 set(MPFW_LIBS_FW2_CORE_CORE_CMAKE_VER                   03)
 set(MPFW_LIBS_FW2_WRAPPER_CORE_CMAKE_VER                02)
 set(MPFW_LIBS_FW2_WRAPPER_RESOURCES_CMAKE_VER           03)
 set(MPFW_LIBS_SDK_MAC_VER                               02)
 set(MPFW_LIBS_SDK_NXP_VER                               01)
-set(MPFW_LIBS_SDK_STM32F769_DISCO_VER                   03)
+set(MPFW_LIBS_SDK_STM32F769_DISCO_VER                   04)
 set(MPFW_APPS_VER                                       02)
 set(MPFW_MAIN_VER                                       01)
 
