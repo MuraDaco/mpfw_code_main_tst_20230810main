@@ -10,6 +10,8 @@ gdb -batch -ex "disassemble /s thread_interrupt" ../build/cmake/cncrncy_tsts.out
 
 */
 
+#include <iomanip>
+
 // system include
 #include <thread>
 #include <pthread.h>
@@ -28,6 +30,7 @@ using namespace fw2::wrapper::core;
 
 #include <sdk_usart.h>
 #include <rsSerial.h>
+#include <uyProtocol2.h>
 using namespace fw2::wrapper::resources;
 
 // tst include
@@ -46,14 +49,67 @@ void thread_service_rsSerial() {
 
 }
 
-int main()
+
+void set_device_addr    (char p_param)  {
+    char l_param_1 = p_param;
+    // if(l_param_1.compare("Master")) uyProtocol2::Set_Master();
+    if(
+        ('1' <= l_param_1) && 
+        ('9' >= l_param_1)
+    ) {
+        uyProtocol2::AddsSet((uint8_t) l_param_1);
+        std::cout << "Set device address: " << l_param_1 << " - end" << std::endl;
+    } 
+}
+
+void set_master_slave    (string p_param)  {
+    if(0 == p_param.compare("Master")) {
+        std::cout << "Master is seleced - Input: " << p_param << " - end" << std::endl;
+        uyProtocol2::Set_Master();
+    } else {
+        if(0 == p_param.compare("Slave")) {
+            std::cout << "Slave is seleced - Input: " << p_param << " - end" << std::endl;
+            uyProtocol2::Set_Slave();
+        } else {
+            std::cout << "Parameter is not ricognized - Input: " << p_param << " - end" << std::endl;
+        }
+    }
+}
+
+
+int main(int argc, char *argv[])
 {
+
+    std::cout << "argc == " << argc << '\n';
+ 
+    for(int ndx{}; ndx != argc; ++ndx) {
+        std::cout << "argv[" << ndx << "] == " << quoted(argv[ndx]) << '\n';
+    }
+    std::cout << "argv[" << argc << "] == "
+              << static_cast<void*>(argv[argc]) << '\n';
+    string l_param("xxx");
+
+    if(argc == 2)   {
+        set_device_addr((char) argv[1][0]);
+    }
+
+    if(argc == 3)   {
+        set_device_addr((char) argv[1][0]);
+        set_master_slave(argv[2]);
+
+    }
+
+    if(argc == 4)   {
+        set_device_addr((char) argv[1][0]);
+        set_master_slave(argv[2]);
+        l_param = argv[3];
+    }
+
     std::thread thread_service;
+	sdk_usart::start(l_param);
+    thread_service = std::thread(thread_service_rsSerial);
 
     rsSerial::Init();
-	sdk_usart::start();
-
-    thread_service = std::thread(thread_service_rsSerial);
 
     // ***************************************************************************
     krInitStaticManager::LoopOnUnits();     
@@ -94,9 +150,8 @@ int main()
     //tt_MainManager::LoopOnUnits();
     //rsSerial::Tx(rsSerial::endl);
 
-
+	sdk_usart::end_0();
     thread_service.join();
-
 	sdk_usart::end();
 
 }

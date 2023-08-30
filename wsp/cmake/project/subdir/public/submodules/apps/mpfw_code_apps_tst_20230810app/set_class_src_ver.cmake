@@ -2,7 +2,7 @@
 ## __________________________________________________________________
 ## VERSION Definitions
 
-set(AP_KR_THREAD02_VER          04  )
+set(AP_KR_THREAD02_VER          05  )
 set(AP_KR_TIMER01_VER           01  )
 set(AP_SV_STATE_VER             01  )
 set(AP_SV_STATE_MACHINE_VER     01  )
