@@ -448,7 +448,7 @@
 	</storageModule>
 	<storageModule moduleId="com.nxp.mcuxpresso.core.datamodels">
 		<sdkName>SDK_2.x_LPCXpresso54608</sdkName>
-		<sdkVersion>2.4.1</sdkVersion>
+		<sdkVersion>2.7.0</sdkVersion>
 	</storageModule>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
